@@ -37,6 +37,7 @@ const p13_2 = new Promise((resolve, reject) => {
 
 Promise.allSettled([p13_1, p13_2])
   .then((results) => {
+    // тут можно применить метод .filter()
       results.forEach((result) => {
           if (result.status === "fulfilled") {
               console.log(result.value);
